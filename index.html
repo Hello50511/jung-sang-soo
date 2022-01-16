@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정상수</title>
+</head>
+<body>
+    <style>
+        h1{
+            border-bottom: 1px solid white;
+            
+        }
+        body{
+            background-color: slategrey;
+            color: white;
+        }
+    </style>
+    <h1>정상수</h1>
+    <div id = "sangsoo">
+        <img src="download.jpg">
+    </div>
+    <input type="button" value="야" onclick="banmal()">
+    <input type="button" value="형님">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        function banmal(){
+            const element = document.getElementById('sangsoo');
+            element.innerText = '';       
+            var tmp ="";
+            tmp = tmp +'<img src="'+'maxresdefault.jpg'+'" border="0" width="299" height="168"/>'
+            $("#sangsoo").append(tmp);
+            const audio = new Audio('반말하지마라니.mp3')
+            audio.play()
+            setTimeout(()=>{
+                const element = document.getElementById('sangsoo');
+                element.innerText = '';       
+                var tmp ="";
+                tmp = tmp +'<img src="'+'download.jpg'+'"/ >'
+                $("#sangsoo").append(tmp);
+            },2000)
+        }
+    </script>
+</body>
+</html>
